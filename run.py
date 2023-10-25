@@ -44,6 +44,8 @@ async def run():
     os.system(f'echo ***** *****')
     os.system(f'echo ***** *****')
     os.system(f'ls abcdefg')
+    import torch
+    torch.cuda.is_available()
     os.system(f'cat /etc/*-release')
     # os.system(f"python launch.py --cors-allow-origins=* --xformers --theme dark --gradio-debug --share")
     sys.path.append('/content/stable-diffusion-webui')
