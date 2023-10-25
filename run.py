@@ -45,8 +45,8 @@ async def run():
     os.system(f'ls abcdefg')
     # os.system(f"python launch.py --cors-allow-origins=* --xformers --theme dark --gradio-debug --share")
     sys.path.append('/content/stable-diffusion-webui')
-    # sys.argv = shlex.split("--cors-allow-origins=* --xformers --theme dark --gradio-debug --share")
-    sys.argv = shlex.split("--a --cors-allow-origins=* --xformers --theme dark --gradio-debug --share --skip-torch-cuda-test")
+    sys.argv = shlex.split("--a --cors-allow-origins=* --xformers --theme dark --gradio-debug --share")
+    # sys.argv = shlex.split("--a --cors-allow-origins=* --xformers --theme dark --gradio-debug --share --skip-torch-cuda-test")
     from modules import launch_utils
     launch_utils.startup_timer.record("initial startup")
     launch_utils.prepare_environment()
