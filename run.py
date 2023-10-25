@@ -22,8 +22,8 @@ volume = modal.NetworkFileSystem.new().persisted("stable-diffusion-webui")
         pip install -q xformers==0.0.20 triton==2.0.0 packaging==23.1"
     ),
     network_file_systems={"/content/stable-diffusion-webui": volume},
-    # gpu="T4",
-    gpu="a10g",
+    gpu="T4",
+    # gpu="a10g",
     timeout=60000,
 )
 async def run():
@@ -44,6 +44,7 @@ async def run():
     os.system(f'echo ***** *****')
     os.system(f'echo ***** *****')
     os.system(f'ls abcdefg')
+    os.system(f'cat /etc/*-release')
     # os.system(f"python launch.py --cors-allow-origins=* --xformers --theme dark --gradio-debug --share")
     sys.path.append('/content/stable-diffusion-webui')
     sys.argv = shlex.split("--a --cors-allow-origins=* --xformers --theme dark --gradio-debug --share")
